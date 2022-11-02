@@ -13,14 +13,17 @@ function App() {
           <label> Email: <br/>
             <input type ="email"></input>
           </label><br/>
-          <label> Gender:  <br/>
-            <input type ="text"></input>
-          </label><br/>
+          <label> Gender:  </label><br/>
+          {/* <label><input type ="radio" id="male" name='gender' value="male"/>Male</label> */}
+          <input type ="radio" id="male" name='gender' value="male"/>Male
+          <input type ="radio" id= "female" name='gender' value="female"/>Female
+          {/* <label><input type ="radio" id= "female" name='gender' value="female"/>Female</label> */}
+          <br/>
           <label> Age: <br/>
             <input type ="number"></input>
           </label><br/>
           <label> Phone Number: <br/>
-            <input type ="number"></input>
+            <input type ="text" maxLength="10"></input>
           </label><br/>
           <label> Address: <br/>
             <input type ="text"></input>
