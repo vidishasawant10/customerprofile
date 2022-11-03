@@ -1,18 +1,22 @@
 import React from 'react';
-
-
 import './App.css';
+import back from './back.png';
 
-
+function saved(){
+  alert('Saved Successfully')
+}
 function App() {
   
   return (
     <div className='App'>
-      <h3>Edit</h3>
+      <div className='Navbar'>
+        <img src={back} alt="back img" align ="left"></img>
+        <h3>Edit</h3>
+      </div>
       <h1> Customer Profile </h1>
         <div>
           <label> Email: <br/>
-            <input type ="email"></input>
+            <input type ="email" placeholder='Enter your email'></input>
           </label><br/>
           <label> Gender:  </label><br/>
           <input type ="radio" id="male" name='gender' value="male"/>Male<br/>
@@ -24,15 +28,16 @@ function App() {
 
           <br/>
           <label> Age: <br/>
-            <input type ="number"></input>
+            <input type ="number" min="18" max="80" placeholder='Enter your age'></input>
           </label><br/>
           <label> Phone Number: <br/>
-            <input type ="text" maxLength="10"></input>
+            <input type ="tel" id ="phone" name="phone" placeholder='123-456-7899' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'></input>
           </label><br/>
           <label> Address: <br/>
-            <input type ="text"></input>
+            <input type ="text" placeholder='Enter your address'></input>
           </label>
         </div>
+        <button onClick={saved}>Save</button>
       
     </div>
   );
